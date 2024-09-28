@@ -1,0 +1,21 @@
+{% extends "calendar/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="flex flex-col gap-4">
+        <h1 class="text-center font-bold text-lg">Search results</h1>
+        <ul class="flex flex-col gap-2">
+                <div class='text-center'>{{events.detail}}</div>
+            {% for event in events %}
+            {% if event.id %}
+                <li>
+                    <a href="{% url 'event' event.id %}" class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent">{{ event.name }}</a>
+                </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <div class="flex items-center justify-center">
+        <a href="{% url 'index' %}" class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent border p-3 w-28 rounded-md hover:border-orange-300 text-center">Back</a>
+        </div>
+</div>
+{% endblock %}

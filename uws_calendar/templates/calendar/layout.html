@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>{% block title %}UWS Calendar{% endblock %}</title>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'calendar/css/tailwind.css' %}" />
+    {% endblock %}
+</head>
+<body>
+    <div class="flex flex-col items-center min-h-[100dvh] gap-4">
+            <h1 class="font-bold italic text-xl text-slate-300 p-4">UWS Calendar</h1>
+            {% block body %}
+            {% endblock %}
+    </div>
+</body> 
+</html>

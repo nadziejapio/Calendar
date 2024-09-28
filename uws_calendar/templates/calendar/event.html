@@ -1,0 +1,22 @@
+{% extends "calendar/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="flex flex-col justify-center items-center text-center max-w-3xl border rounded-md p-4 gap-3">
+    <h1 class="font-bold text-xl bg-gradient-to-r from-orange-300 to-slate-500 bg-clip-text text-transparent">{{ event.name }}</h1>
+    <hr class="border w-full"/>
+    <div class="flex flex-col">
+        <h3 class="font-bold">{{event.start_time|date:"d / M / y"}}</h3>
+        <h3 class="font-bold">{{ event.start_time|date:"H:i" }} - {{ event.end_time|date:"H:i" }}</h3>
+        <h4 class="italic">{{ event.location }}</h4>
+    </div>
+    <hr class="border w-full"/>
+    <p>{{ event.short_description }}</p>
+    <hr class="border w-full"/>
+    <p>{{ event.long_description }}</p>
+    <a href="{{ event.registration_link }}" class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent border p-3 w-28 rounded-md hover:border-orange-300">Register</a>
+    
+</div>
+
+<a href="{% url 'index' %}" class="justify-center items-center text-center hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent border p-3 w-28 rounded-md hover:border-orange-300">Back</a>
+{% endblock %}
