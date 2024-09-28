@@ -9,8 +9,7 @@
             class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent">Previous</a>
         <hr class="border h-4" />
         <h1 tabindex=0
-            class="font-bold text-xl bg-gradient-to-r from-orange-300 to-slate-500 bg-clip-text text-transparent">{{
-            month_name }} {{ year }}</h1>
+            class="font-bold text-xl bg-gradient-to-r from-orange-300 to-slate-500 bg-clip-text text-transparent">{{month_name}} {{ year }}</h1>
         <hr class="border h-4" />
         <a href="{% url 'index' next_year next_month %}"
             class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent">Next</a>
@@ -18,8 +17,7 @@
     <form action="{% url 'search' %}" method="post" class="text-base w-100 flex gap-2">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Search"
-            class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent border p-1 w-28 rounded-md hover:border-orange-300 cursor-pointer">
+        <input type="submit" value="Search" class="hover:bg-gradient-to-l from-orange-300 to-slate-500 hover:bg-clip-text hover:text-transparent border p-1 w-28 rounded-md hover:border-orange-300 cursor-pointer">
     </form>
 
     <div class="max-w-[100dvw] overflow-scroll">

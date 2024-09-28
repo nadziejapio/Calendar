@@ -36,7 +36,6 @@ def index(request, year=None, month=None):
 
     cal = calendar.Calendar()
     month_days = cal.monthdayscalendar(year, month)
-
     return render(
         request,
         "calendar/index.html",
