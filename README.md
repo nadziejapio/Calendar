@@ -1,38 +1,40 @@
 ***Setting up***
 
-    1. Download Docker: 
+1. Download Docker: 
         - Visit the official Docker website at [https://www.docker.com/get-started](https://www.docker.com/get-started) and follow the instructions to download and install Docker for your operating system.
 
-    2. Clone the repository: 
-        ```
+2. Clone the repository: 
+
+
         git clone https://github.com/nadziejapio/calendar.git
-        ```
 
-    3. Add your API key to config.py file:
-        ```
+3. Add your API key to config.py file:
+
+
         api_key = 'HERE_IS_YOUR_API_KEY'
-        ```
 
-    4. Build the Docker image: 
-        ```
+4. Build the Docker image: 
+
+
         docker build -t uws-calendar .
-        ```
 
-    5. Run the Docker container: 
-        ```
+5. Run the Docker container: 
+
+
         docker run -p 8000:8000 uws-calendar
-        ```
 
-    6. Access the application: 
-        Open your web browser and visit [http://localhost:8000](http://localhost:8000) to access the Django application running inside the Docker container.
+6. Access the application: 
 
-    7. Stop the Docker container: 
-        Press `Ctrl+C` in the terminal to stop the running Docker container.
+   Open your web browser and visit [http://localhost:8000](http://localhost:8000) to access the Django application running inside the Docker container.
+
+7. Stop the Docker container: 
+
+   Press `Ctrl+C` in the terminal to stop the running Docker container.
     
-    8. If you want to run the unit tests for the application, use the following command inside the Docker container or in your local environment:
-        ```
+8. If you want to run the unit tests for the application, use the following command inside the Docker container or in your local environment:
+
+
         python manage.py test
-        ```
 
 
 ***How to use calendar?***
