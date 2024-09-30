@@ -1,4 +1,5 @@
 ***Setting up***
+
     1. Download Docker: 
         - Visit the official Docker website at [https://www.docker.com/get-started](https://www.docker.com/get-started) and follow the instructions to download and install Docker for your operating system.
 
