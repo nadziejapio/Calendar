@@ -1,14 +1,17 @@
 ***Setting up***
 
-1. Download Docker: 
-        - Visit the official Docker website at [https://www.docker.com/get-started](https://www.docker.com/get-started) and follow the instructions to download and install Docker for your operating system.
+1. Download Docker and open Docker Desktop: 
+        
+- Visit the official Docker website at [https://www.docker.com/get-started](https://www.docker.com/get-started) and follow the instructions to download and install Docker for your operating system.
 
 2. Clone the repository: 
 
 
         git clone https://github.com/nadziejapio/calendar.git
+        cd calendar
 
-3. Add your API key to config.py file:
+
+3. Add your API key to uws_calendar/config.py file and save it:
 
 
         api_key = 'HERE_IS_YOUR_API_KEY'
